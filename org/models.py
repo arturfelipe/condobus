@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 
 class Organization(models.Model):
@@ -11,6 +11,7 @@ class Organization(models.Model):
 
     class Meta:
         verbose_name = _('Organization')
+        verbose_name_plural = _('Organizations')
 
     def __str__(self):
         return self.name
