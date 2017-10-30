@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-28 21:11-0200\n"
+"POT-Creation-Date: 2017-10-30 03:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: org/models.py:7
+#: condobus/settings.py:127
+msgid "Portuguese"
+msgstr "Português"
+
+#: condobus/settings.py:128
+msgid "English"
+msgstr "Inglês"
+
+#: org/apps.py:7 org/models.py:13
+msgid "Organization"
+msgstr "Organização"
+
+#: org/models.py:7 transport/models.py:6
 msgid "Name"
 msgstr "Nome"
 
@@ -30,12 +42,18 @@ msgstr "Descrição"
 msgid "Rules"
 msgstr "Regras"
 
-#: org/models.py:13
-msgid "Organization"
-msgstr "Organização"
-
 #: org/models.py:14
-#, fuzzy
-#| msgid "Organization"
 msgid "Organizations"
 msgstr "Organizações"
+
+#: transport/apps.py:7
+msgid "Transport"
+msgstr "Transporte"
+
+#: transport/models.py:9
+msgid "Bus"
+msgstr "Ônibus"
+
+#: transport/models.py:10
+msgid "Buses"
+msgstr "Ônibus"
