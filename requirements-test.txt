@@ -1,2 +1,2 @@
 -r requirements.txt
-pylint==1.7.4
+flake8==3.5.0

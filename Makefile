@@ -1,4 +1,4 @@
-.PHONY: clean setup clean-python-deps run
+.PHONY: clean setup clean-python-deps run lint
 
 clean:
 	@find . -name "*.pyc" -delete
@@ -11,3 +11,6 @@ clean-python-deps:
 
 run: clean
 	@./manage.py runserver
+
+lint: clean
+	@flake8 .
