@@ -1,0 +1,9 @@
+language: python
+sudo: false
+cache: pip
+python:
+  - "3.6.2"
+script:
+  - make test
+  - make lint
+  - make isort

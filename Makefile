@@ -14,6 +14,9 @@ clean-python-deps:
 run: clean
 	@./manage.py runserver
 
+test: clean
+	@./manage.py test
+
 lint: clean
 	@flake8 .
 
