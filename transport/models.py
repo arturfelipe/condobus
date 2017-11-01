@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from org.models import Organization
 
 
 class Bus(models.Model):
     name = models.CharField(_('Name'), max_length=200)
     organization = models.ForeignKey(
-        'org.Organization',
+        Organization,
         on_delete=models.CASCADE,
         related_name='buses',
         verbose_name=_('Organization')
