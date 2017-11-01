@@ -1,4 +1,6 @@
-.PHONY: clean setup clean-python-deps run lint
+.PHONY: clean setup clean-python-deps run lint isort isort-autofix
+
+PYTHON_DIRS := condobus/ org/ transport/
 
 clean:
 	@find . -name "*.pyc" -delete
@@ -14,3 +16,9 @@ run: clean
 
 lint: clean
 	@flake8 .
+
+isort: clean
+	isort --recursive --check-only --diff ${PYTHON_DIRS}
+
+isort-autofix: clean
+	@isort --recursive --atomic ${PYTHON_DIRS}
