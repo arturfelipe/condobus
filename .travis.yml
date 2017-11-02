@@ -4,6 +4,7 @@ cache: pip
 python:
   - "3.6.2"
 script:
+  - make setup
   - make test
   - make lint
   - make isort
