@@ -29,4 +29,5 @@ isort-autofix: clean
 db-setup:
 	# Add you postgres user with the -U option in the end of the commands below
 	@psql -c "CREATE DATABASE condobus;" -d postgres
-	@psql -c "CREATE USER condobus WITH PASSWORD 'condobus' CREATEDB;" -d condobus
+	@psql -c "CREATE USER condobus WITH PASSWORD 'condobus' SUPERUSER;" -d condobus
+	@psql -c "CREATE EXTENSION postgis;" -d condobus

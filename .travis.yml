@@ -6,7 +6,9 @@ python:
 services:
   - postgresql
 before_script:
-  - psql -c "CREATE USER condobus WITH PASSWORD 'condobus' CREATEDB;" -U postgres
+  - psql -c "CREATE USER condobus WITH PASSWORD 'condobus' CREATEDB" -U postgres
+  - psql -c "CREATE EXTENSION postgis" -U postgres
+  - psql -c "CREATE DATABASE test_condobus" -U postgres
 script:
   - make setup
   - make test
