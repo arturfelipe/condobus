@@ -1,4 +1,4 @@
-.PHONY: clean setup clean-python-deps run lint isort isort-autofix
+.PHONY: clean setup clean-python-deps run lint isort isort-autofix db-setup
 
 PYTHON_DIRS := condobus/ org/ transport/
 
@@ -25,3 +25,8 @@ isort: clean
 
 isort-autofix: clean
 	@isort --recursive --atomic ${PYTHON_DIRS}
+
+db-setup:
+	# Add you postgres user with the -U option in the end of the commands below
+	@psql -c "CREATE DATABASE condobus;" -d postgres
+	@psql -c "CREATE USER condobus WITH PASSWORD 'condobus' CREATEDB;" -d condobus
