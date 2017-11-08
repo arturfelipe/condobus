@@ -1,6 +1,6 @@
 from django.test import TestCase
-
 from org.models import Organization
+
 from ..models import Bus, Route
 
 
