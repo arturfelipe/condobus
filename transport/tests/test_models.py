@@ -1,9 +1,10 @@
 from django.test import TestCase
 
-from ..models import Organization
+from org.models import Organization
+from ..models import Bus
 
 
-class OrganizationModelTest(TestCase):
+class BusModelTest(TestCase):
 
     def setUp(self):
         self.org = Organization.objects.create(
@@ -12,9 +13,13 @@ class OrganizationModelTest(TestCase):
             description='We are a familiar condominium',
             rules='Please check our conduct code page at https://some-url.foo'
         )
+        self.bus = Bus.objects.create(
+            name='Bus 1',
+            organization=self.org
+        )
 
     def test_str(self):
-        self.assertEqual('Some Org', str(self.org))
+        self.assertEqual('Bus 1', str(self.bus))
 
     def test_can_create(self):
-        self.assertTrue(Organization.objects.exists())
+        self.assertTrue(Bus.objects.exists())
