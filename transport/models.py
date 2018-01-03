@@ -21,19 +21,6 @@ class Bus(models.Model):
         return self.name
 
 
-class StopPoint(models.Model):
-    name = models.CharField(_('Name'), max_length=200)
-    location = models.PointField(_('Location'), default=Point(-22.99977, -43.36063))
-    obs = models.TextField(_('Observation'), null=True, blank=True)
-
-    class Meta:
-        verbose_name = _('StopPoint')
-        verbose_name_plural = _('StopPoints')
-
-    def __str__(self):
-        return self.name
-
-
 class Route(models.Model):
     name = models.CharField(_('Name'), max_length=200)
     organization = models.ForeignKey(
@@ -46,6 +33,25 @@ class Route(models.Model):
     class Meta:
         verbose_name = _('Route')
         verbose_name_plural = _('Routes')
+
+    def __str__(self):
+        return self.name
+
+
+class StopPoint(models.Model):
+    name = models.CharField(_('Name'), max_length=200)
+    location = models.PointField(_('Location'), default=Point(-22.99977, -43.36063))
+    obs = models.TextField(_('Observation'), null=True, blank=True)
+    route = models.ForeignKey(
+        Route,
+        on_delete=models.CASCADE,
+        related_name='stop_points',
+        verbose_name=_('Route')
+    )
+
+    class Meta:
+        verbose_name = _('StopPoint')
+        verbose_name_plural = _('StopPoints')
 
     def __str__(self):
         return self.name
