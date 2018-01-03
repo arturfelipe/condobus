@@ -77,11 +77,41 @@ class TimeSheet(models.Model):
         related_name='time_sheets',
         verbose_name=_('Direction')
     )
-    name = models.CharField(_('Name'), max_length=200)
 
     class Meta:
         verbose_name = _('TimeSheet')
         verbose_name_plural = _('TimeSheets')
 
     def __str__(self):
-        return self.name
+        return f'{self.direction} v{self.version}'
+
+
+class Travel(models.Model):
+    departure = models.CharField(_('Departure'), max_length=200, null=True, blank=True)
+    destination = models.CharField(_('Destination'), max_length=200, null=True, blank=True)
+    bus = models.ForeignKey(
+        Bus,
+        on_delete=models.CASCADE,
+        related_name='travels',
+        verbose_name=_('Bus')
+    )
+    route = models.ForeignKey(
+        Route,
+        on_delete=models.CASCADE,
+        related_name='travels',
+        verbose_name=_('Route')
+    )
+    time_sheet = models.ForeignKey(
+        TimeSheet,
+        on_delete=models.CASCADE,
+        related_name='travels',
+        verbose_name=_('TimeSheet')
+    )
+    time = models.TimeField(_('Time'))
+
+    class Meta:
+        verbose_name = _('Travel')
+        verbose_name_plural = _('Travels')
+
+    def __str__(self):
+        return f'{self.bus} {self.time} {self.route}'

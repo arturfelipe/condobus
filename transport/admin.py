@@ -1,12 +1,10 @@
 from django.contrib.admin.options import FORMFIELD_FOR_DBFIELD_DEFAULTS
 from django.contrib.gis import admin
-from transport.models import Bus, Route, StopPoint
+from transport.models import Bus, Direction, Route, StopPoint, TimeSheet, Travel
 
 
 class StopPointInline(admin.OSMGeoAdmin, admin.StackedInline):
     model = StopPoint
-    can_delete = False
-    verbose_name_plural = 'StopPoints'
 
     def __init__(self, parent_model, admin_site):
         self.admin_site = admin_site
@@ -23,8 +21,18 @@ class StopPointInline(admin.OSMGeoAdmin, admin.StackedInline):
 
 
 class RouteAdmin(admin.ModelAdmin):
-    inlines = [StopPointInline,]
+    inlines = (StopPointInline,)
+
+
+class TravelInline(admin.TabularInline):
+    model = Travel
+
+
+class TimeSheetAdmin(admin.ModelAdmin):
+    inlines = (TravelInline,)
 
 
 admin.site.register(Bus)
+admin.site.register(Direction)
 admin.site.register(Route, RouteAdmin)
+admin.site.register(TimeSheet, TimeSheetAdmin)
