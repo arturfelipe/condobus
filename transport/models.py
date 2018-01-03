@@ -16,6 +16,7 @@ class Bus(models.Model):
     class Meta:
         verbose_name = _('Bus')
         verbose_name_plural = _('Buses')
+        ordering = ['name']
 
     def __str__(self):
         return self.name
@@ -33,6 +34,7 @@ class Route(models.Model):
     class Meta:
         verbose_name = _('Route')
         verbose_name_plural = _('Routes')
+        ordering = ['name']
 
     def __str__(self):
         return self.name
