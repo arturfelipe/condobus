@@ -55,3 +55,33 @@ class StopPoint(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Direction(models.Model):
+    name = models.CharField(_('Name'), max_length=200)
+
+    class Meta:
+        verbose_name = _('Direction')
+        verbose_name_plural = _('Directions')
+
+    def __str__(self):
+        return self.name
+
+
+class TimeSheet(models.Model):
+    version = models.PositiveSmallIntegerField(_('Version'))
+    validity = models.DateField(_('Validity'))
+    direction = models.ForeignKey(
+        Direction,
+        on_delete=models.CASCADE,
+        related_name='time_sheets',
+        verbose_name=_('Direction')
+    )
+    name = models.CharField(_('Name'), max_length=200)
+
+    class Meta:
+        verbose_name = _('TimeSheet')
+        verbose_name_plural = _('TimeSheets')
+
+    def __str__(self):
+        return self.name
