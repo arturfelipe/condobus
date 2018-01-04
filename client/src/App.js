@@ -1,18 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './bus-icon.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <div className="cb-app">
+        <header className="cb-app-header">
+          <div className="cb-app-header__brand">
+            <img src={logo} className="cb-app-logo" alt="logo" />
+            <h1 className="cb-app-name">condobus</h1>
+          </div>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main className="cb-app-main">
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+        </main>
+        <footer className="cb-app-footer">
+          Hi
+        </footer>
       </div>
     );
   }

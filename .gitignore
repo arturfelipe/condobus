@@ -101,3 +101,9 @@ ENV/
 .mypy_cache/
 
 *.sqlite3
+
+# System
+.DS_Store
+
+# Node
+node_modules
