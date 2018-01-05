@@ -8,7 +8,7 @@ class App extends Component {
       <div className="cb-app">
         <header className="cb-app-header">
           <div className="cb-app-header__brand">
-            <img src={logo} className="cb-app-logo" alt="logo" />
+            {/* <img src={logo} className="cb-app-logo" alt="logo" /> */}
             <h1 className="cb-app-name">condobus</h1>
           </div>
         </header>
@@ -32,6 +32,9 @@ class App extends Component {
           Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
           Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
           Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+          Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
+
           Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
           Hello World Hello World Hello World Hello WorldHello World Hello World Hello World Hello World
         </main>
