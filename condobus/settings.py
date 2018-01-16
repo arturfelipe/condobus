@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'org',
     'transport',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,7 @@ LANGUAGES = (
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
+
+GRAPHENE = {
+    'SCHEMA': 'condobus.schema.schema'
+}
