@@ -1,9 +1,10 @@
 import graphene
 
 import org.schema
+import transport.schema
 
 
-class Query(org.schema.Query, graphene.ObjectType):
+class Query(org.schema.Query, transport.schema.Query, graphene.ObjectType):
     pass
 
 
