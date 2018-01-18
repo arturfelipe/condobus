@@ -1,8 +1,9 @@
 import graphene
 from graphene_django.types import DjangoObjectType
 from graphene_django.converter import convert_django_field
-from transport.models import TimeSheet, Travel, Route, StopPoint, Direction
+from transport.models import TimeSheet, Travel, Route, StopPoint, Direction, Bus
 from django.contrib.gis.db import models
+
 
 @convert_django_field.register(models.PointField)
 def convert_PointField(field, registry=None):
@@ -33,6 +34,11 @@ class DirectionType(DjangoObjectType):
         model = Direction
 
 
+class BusType(DjangoObjectType):
+    class Meta:
+        model = Bus
+
+
 class Query(object):
     time_sheets = graphene.List(TimeSheetType)
 
@@ -52,6 +58,12 @@ class Query(object):
 
     stop_point = graphene.Field(
         StopPointType,
+        id=graphene.Int(),
+        name=graphene.String()
+    )
+
+    bus = graphene.Field(
+        BusType,
         id=graphene.Int(),
         name=graphene.String()
     )
