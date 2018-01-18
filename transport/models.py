@@ -61,6 +61,12 @@ class StopPoint(models.Model):
 
 class Direction(models.Model):
     name = models.CharField(_('Name'), max_length=200)
+    organization = models.ForeignKey(
+        Organization,
+        on_delete=models.CASCADE,
+        related_name='directions',
+        verbose_name=_('Organization')
+    )
 
     class Meta:
         verbose_name = _('Direction')
@@ -78,6 +84,12 @@ class TimeSheet(models.Model):
         on_delete=models.CASCADE,
         related_name='time_sheets',
         verbose_name=_('Direction')
+    )
+    organization = models.ForeignKey(
+        Organization,
+        on_delete=models.CASCADE,
+        related_name='time_sheets',
+        verbose_name=_('Organization')
     )
 
     class Meta:
