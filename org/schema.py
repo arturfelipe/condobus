@@ -1,5 +1,6 @@
 import graphene
 from graphene_django.types import DjangoObjectType
+
 from org.models import Organization
 
 
@@ -13,5 +14,3 @@ class Query(object):
 
     def resolve_organizations(self, info, **kwargs):
         return Organization.objects.all()
-
-
