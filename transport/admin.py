@@ -22,6 +22,7 @@ class StopPointInline(admin.OSMGeoAdmin, admin.StackedInline):
 
 class RouteAdmin(admin.ModelAdmin):
     inlines = (StopPointInline,)
+    list_display = ('name', 'organization')
 
 
 class TravelInline(admin.TabularInline):
@@ -30,9 +31,18 @@ class TravelInline(admin.TabularInline):
 
 class TimeSheetAdmin(admin.ModelAdmin):
     inlines = (TravelInline,)
+    list_display = ('direction', 'version', 'validity', 'organization')
 
 
-admin.site.register(Bus)
-admin.site.register(Direction)
+class BusAdmin(admin.ModelAdmin):
+    list_display = ('name', 'organization')
+
+
+class DirectionAdmin(admin.ModelAdmin):
+    list_display = ('name', 'organization')
+
+
+admin.site.register(Bus, BusAdmin)
+admin.site.register(Direction, DirectionAdmin)
 admin.site.register(Route, RouteAdmin)
 admin.site.register(TimeSheet, TimeSheetAdmin)
