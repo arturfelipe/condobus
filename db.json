@@ -1,0 +1,458 @@
+[
+	{
+		"model": "org.organization",
+		"pk": 1,
+		"fields": {
+			"name": "Parque das Rosas",
+			"logo": "",
+			"description": "A comissão de Transportes é composta pelos síndicos de todos os condomínios que\r\ncompõem o Parque das Rosas. \r\n\r\nSALA COORDENAÇÃO - GPS - UTIL\r\n\r\nROSASHOPPING SALA 210 - Tel: 2431-3815\r\nATENDIMENTO COORDENADOR: agendar\r\n\r\nHORÁRIO DE ATENDIMENTO: 9h/12h e das 13h/18h\r\ne-mail: comissaodetransportesrosas@gmail.com\r\n\r\nATENDIMENTO GPS: 9h às 20h\r\nFacebook: Parque das Rosas Sistema de Transportes",
+			"rules": "1 - O Sistema de Transportes é destinado, exclusivamente a moradores do Parque das\r\nRosas, devidamente cadastrados nos condomínios participantes.\r\n2 - Perdas ou extravios da Carteira de Identidicação devem ser comunicadas\r\nimediatamente na administração de seu condomínio.\r\n3 - No embarque o usuário deverá validar a Carteira de Identificação (pessoal e\r\nintransferível) no equipamento validador e apresentar ao motorista para conferência da\r\nfoto.\r\n4 - Objetos perdidos no interior do veículo e entregues ao motorista ou encontrados por\r\neste serão encaminhados à sala GPS.\r\n5 - Não é permitida a realização de comemorações com alimentos e bebidas no interior\r\ndos ônibus.\r\n6 - O embarque somente poderá ocorrer nos pontos oficiais em cada rota e o\r\nDesembarque nos pontos oficiais e nos pontos de ônibus urbanos.\r\n7 -A rota EXPRESSO DIRETO somente tem ponto inicial e ponto final não tendo nenhuma\r\nparada para embarque ou desembarque em todo seu trajeto, podendo utilizar qualquer\r\nrota visando cumprir o menor tempo possível.\r\n8 - Para segurança, a porta interna deverá estar FECHADA em todo o trajeto, sendo ser\r\naberta pelo motorista somente para embarque e desembarque.\r\n9 - Reclamações, sugestões e elogios deverão ser enviados através do e-mail da Comissão\r\nde Transportes.\r\n10 - As rotas origem Centro com Embarque/desembarque autorizado na Barra obedecerão\r\nos pontos definidos na rota Circular.\r\n11 - As definições operacionais(Grade de Horários, Rotas, e acesso ao serviço) são de\r\nresponsabilidade da Comissão de Transportes, cabendo aos motoristas sua fiel\r\ncumprimento contando com a colaboração dos usuários."
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 1,
+		"fields": {
+			"name": "1",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 2,
+		"fields": {
+			"name": "2",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 3,
+		"fields": {
+			"name": "3",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 4,
+		"fields": {
+			"name": "4",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 5,
+		"fields": {
+			"name": "5",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 6,
+		"fields": {
+			"name": "6",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 7,
+		"fields": {
+			"name": "7",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 8,
+		"fields": {
+			"name": "8",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 9,
+		"fields": {
+			"name": "9",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 10,
+		"fields": {
+			"name": "10",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 11,
+		"fields": {
+			"name": "11",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 12,
+		"fields": {
+			"name": "12",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 13,
+		"fields": {
+			"name": "13",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 14,
+		"fields": {
+			"name": "14",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 15,
+		"fields": {
+			"name": "15",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 16,
+		"fields": {
+			"name": "16",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 17,
+		"fields": {
+			"name": "M1",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.bus",
+		"pk": 18,
+		"fields": {
+			"name": "M2",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 1,
+		"fields": {
+			"name": "ROTA 1 - PDR/CENTRO I - ZONA SUL(ZSUL)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 2,
+		"fields": {
+			"name": "ROTA 2 - CENTRO I/PDR - ZONA SUL(ZSUL)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 3,
+		"fields": {
+			"name": "ROTA 2a - CENTRO I/PDR - ZSUL(BARATA RIBEIRO)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 4,
+		"fields": {
+			"name": "ROTA 2b - CENTRO I/PDR - ZSUL (ATERRO)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 5,
+		"fields": {
+			"name": "ROTA 3 - PDR/CENTRO I - JD. BOTÂNICO(JBOT)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 6,
+		"fields": {
+			"name": "ROTA 4 - CENTRO I/PDR - JD.BOTÂNICO(JBOT)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 7,
+		"fields": {
+			"name": "ROTA 5 - PDR/CENTRO II - ALTO BOA VISTA(ABVT)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 8,
+		"fields": {
+			"name": "ROTA 6 - CENTRO II/PDR - ALTO DA BOA VISTA(ABVT)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 9,
+		"fields": {
+			"name": "ROTA 6a - CENTRO II/PDR(ABVT) das 6 às 10.30h",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 10,
+		"fields": {
+			"name": "ROTA 6b - TIJUCA CIRCULAR (após a Rua Felisberto Menezes)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 11,
+		"fields": {
+			"name": "ROTA 7 - PDR/CENTRO - LINHA AMARELA CIRCULAR(LAMC)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 12,
+		"fields": {
+			"name": "ROTA 8 - CENTRO I/PDR - VIA LINHA AMARELA (LAM)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 13,
+		"fields": {
+			"name": "ROTA 8a - CENTRO II/PDR - VIA LINHA AMARELA/PRES.VARGAS",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 14,
+		"fields": {
+			"name": "ROTA 9 - PDR-CENTRO II - VIA GRAJAU/JPA(GJPA)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 15,
+		"fields": {
+			"name": "ROTA 10 - CENTRO II/PDR - VIA GRAJAÚ/JPA(GJPA)",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 16,
+		"fields": {
+			"name": "ROTA 15 - PDR/CENTRO - EXPRESSO DIRETO CIRCULAR",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 17,
+		"fields": {
+			"name": "ROTA 17 - PDR/CENTRO I - EXPRESSO CENTRO DIRETO",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 18,
+		"fields": {
+			"name": "ROTA 19 - CENTRO II/PDR VIA UERJ/ZONA SUL 21:h50",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 19,
+		"fields": {
+			"name": "ROTA 21 - PDR/LGO. DA BARRA",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 20,
+		"fields": {
+			"name": "ROTA 22 - PDR/LARGO DA BARRA/BARRINHA",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 21,
+		"fields": {
+			"name": "ROTA 25 - PDR/BARRASHOPPING/VIA PARQUE/SUB-PREFEITURA",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 22,
+		"fields": {
+			"name": "ROTA 26 - PDR/BARRASHOPPING/VIA PARQUE",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 23,
+		"fields": {
+			"name": "ROTA 27 - PDR/BARRASHOPPING/LAS PALMAS",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 24,
+		"fields": {
+			"name": "ROTA 28 - BARRASHOPPING/LAS PALMAS",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 25,
+		"fields": {
+			"name": "ROTA 31 - PDR/BARRASHOPPING/VIA PARQUE/LAS PALMAS",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.route",
+		"pk": 26,
+		"fields": {
+			"name": "ROTA 31a - PDR/BARRASHOPPING/VIA PARQUE/UPTOWN",
+			"organization": 1
+		}
+	},
+	{
+		"model": "transport.direction",
+		"pk": 1,
+		"fields": {
+            "name": "Centro (Dias de semana)",
+            "organization": 1
+		}
+	},
+	{
+		"model": "transport.direction",
+		"pk": 2,
+		"fields": {
+			"name": "Barra (Dias de semana)",
+            "organization": 1
+		}
+	},
+	{
+		"model": "transport.direction",
+		"pk": 3,
+		"fields": {
+			"name": "Centro (Sábado)",
+            "organization": 1
+		}
+	},
+	{
+		"model": "transport.direction",
+		"pk": 4,
+		"fields": {
+			"name": "Barra (Sábado)",
+            "organization": 1
+		}
+	},
+	{
+		"model": "transport.direction",
+		"pk": 5,
+		"fields": {
+			"name": "Circular (Dias de semana)",
+            "organization": 1
+		}
+	},
+	{
+		"model": "transport.direction",
+		"pk": 6,
+		"fields": {
+			"name": "Circular (Sábado)",
+            "organization": 1
+		}
+	},
+	{
+		"model": "transport.timesheet",
+		"pk": 1,
+		"fields": {
+			"version": 5,
+			"validity": "2017-09-04",
+			"direction": 1,
+            "organization": 1
+		}
+	},
+	{
+		"model": "transport.travel",
+		"pk": 1,
+		"fields": {
+			"departure": null,
+			"destination": "CENTRO I",
+			"bus": 1,
+			"route": 5,
+			"time_sheet": 1,
+			"time": "05:50:00"
+		}
+	},
+	{
+		"model": "transport.travel",
+		"pk": 2,
+		"fields": {
+			"departure": null,
+			"destination": "TIJUCA CIRCULAR (B)",
+			"bus": 2,
+			"route": 7,
+			"time_sheet": 1,
+			"time": "05:50:00"
+		}
+	},
+	{
+		"model": "transport.travel",
+		"pk": 3,
+		"fields": {
+			"departure": null,
+			"destination": "CENTRO CIRCULAR (F)",
+			"bus": 3,
+			"route": 16,
+			"time_sheet": 1,
+			"time": "06:05:00"
+		}
+	}
+]

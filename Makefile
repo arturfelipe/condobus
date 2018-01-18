@@ -31,3 +31,10 @@ db-setup:
 	@psql -c "CREATE DATABASE condobus;" -d postgres
 	@psql -c "CREATE USER condobus WITH PASSWORD 'condobus' SUPERUSER;" -d condobus
 	@psql -c "CREATE EXTENSION postgis;" -d condobus
+
+db-cleanup:
+	@dropdb condobus
+	@dropuser condobus
+
+db-load:
+	@./manage.py loaddata db.json
