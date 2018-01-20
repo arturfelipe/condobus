@@ -1,8 +1,9 @@
 import graphene
-from graphene_django.types import DjangoObjectType
 from graphene_django.converter import convert_django_field
-from transport.models import TimeSheet, Travel, Route, StopPoint, Direction, Bus
+from graphene_django.types import DjangoObjectType
+
 from django.contrib.gis.db import models
+from transport.models import Bus, Direction, Route, StopPoint, TimeSheet, Travel
 
 
 @convert_django_field.register(models.PointField)
@@ -18,6 +19,7 @@ class TimeSheetType(DjangoObjectType):
 class TravelType(DjangoObjectType):
     class Meta:
         model = Travel
+
 
 class RouteType(DjangoObjectType):
     class Meta:

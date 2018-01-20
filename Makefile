@@ -1,4 +1,4 @@
-.PHONY: clean setup clean-python-deps run lint isort isort-autofix db-setup
+.PHONY: clean setup clean-python-deps run lint isort isort-autofix db-setup db-cleanup db-seed
 
 PYTHON_DIRS := condobus/ org/ transport/
 
@@ -36,5 +36,5 @@ db-cleanup:
 	@dropdb condobus
 	@dropuser condobus
 
-db-load:
+db-seed:
 	@./manage.py loaddata db.json
