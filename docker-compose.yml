@@ -13,6 +13,11 @@ services:
     volumes:
       - /srv/docker/postgresql:/var/lib/postgresql/data
 
+  pgadmin:
+    image: chorss/docker-pgadmin4
+    ports:
+      - "5050:5050"
+
   web:
     restart: always
     build: .
