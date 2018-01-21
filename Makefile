@@ -14,6 +14,9 @@ clean-python-deps:
 run: clean
 	@./manage.py runserver 0.0.0.0:8000
 
+migrate: clean
+	@./manage.py migrate
+
 test: clean
 	@./manage.py test
 
