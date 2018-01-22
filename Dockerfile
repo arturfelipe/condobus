@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:latest
 
 ENV PYTHONUNBUFFERED 1
 
@@ -9,4 +9,4 @@ RUN mkdir /code
 WORKDIR /code
 ADD . /code/
 
-RUN make setup
+RUN make setup-backend

@@ -18,7 +18,7 @@ services:
     ports:
       - "5050:5050"
 
-  web:
+  backend:
     restart: always
     build: .
     command: "./docker/web-start.sh"
@@ -30,5 +30,16 @@ services:
       - "8000:8000"
     depends_on:
       - db
+
+  frontend:
+    restart: always
+    build: ./client
+    command: "npm start"
+    volumes:
+      - ./client:/code
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
 
 

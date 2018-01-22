@@ -16,7 +16,7 @@ addons:
 before_script:
   - psql -c "CREATE USER condobus WITH PASSWORD 'condobus' SUPERUSER" -U postgres
 script:
-  - make setup
-  - make test
-  - make lint
+  - make setup-backend
+  - make test-backend
+  - make lint-backend
   - make isort

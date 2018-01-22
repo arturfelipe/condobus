@@ -3,6 +3,29 @@ import logo from './bus-icon.svg';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+    var csrftoken;
+    var cookies = ('; ' + document.cookie).split('; csrftoken=');
+    if (cookies.length == 2)
+      csrftoken = cookies.pop().split(';').shift();
+
+    fetch('/graphql/', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrftoken
+      },
+      body: JSON.stringify({ query: '{ timeSheets { version } }' }),
+      credentials: 'include'
+    })
+      .then(resp => resp.text())
+      .then(body => {
+        console.log(JSON.parse(body))
+      })
+  }
+
   render() {
     return (
       <div className="cb-app">
