@@ -9,4 +9,4 @@ RUN mkdir /code
 WORKDIR /code
 ADD . /code/
 
-RUN make setup-backend
+RUN pip install -r requirements-test.txt

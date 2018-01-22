@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './bus-icon.svg';
 import './App.css';
 
 class App extends Component {
@@ -7,7 +6,7 @@ class App extends Component {
   componentDidMount() {
     var csrftoken;
     var cookies = ('; ' + document.cookie).split('; csrftoken=');
-    if (cookies.length == 2)
+    if (cookies.length === 2)
       csrftoken = cookies.pop().split(';').shift();
 
     fetch('/graphql/', {

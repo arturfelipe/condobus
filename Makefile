@@ -1,6 +1,6 @@
 .PHONY: clean setup-frontend setup-backend setup clean-python-deps run-backend run-frontend migrate test-backend lint-backend isort isort-autofix db-setup db-cleanup db-seed
 
-PYTHON_DIRS := condobus/ org/ transport/
+PYTHON_DIRS := backend/condobus/ backend/org/ backend/transport/
 
 clean:
 	@find . -name "*.pyc" -delete
@@ -9,7 +9,7 @@ setup-frontend:
 	@npm i --prefix client
 
 setup-backend:
-	@pip install -r requirements-test.txt
+	@pip install -r backend/requirements-test.txt
 
 setup: setup-backend setup-frontend
 
@@ -17,19 +17,19 @@ clean-python-deps:
 	@pip freeze | grep -v "^-e" | xargs pip uninstall -y
 
 run-backend: clean
-	@./manage.py runserver 0.0.0.0:8000
+	@backend/manage.py runserver 0.0.0.0:8000
 
 run-frontend: clean
 	@npm start --prefix client
 
 migrate: clean
-	@./manage.py migrate
+	@backend/manage.py migrate
 
 test-backend: clean
-	@./manage.py test
+	@backend/manage.py test
 
 lint-backend: clean
-	@flake8 .
+	@flake8 ${PYTHON_DIRS}
 
 isort: clean
 	@isort --recursive --check-only --diff ${PYTHON_DIRS}
@@ -48,4 +48,4 @@ db-cleanup:
 	@dropuser condobus
 
 db-seed:
-	@./manage.py loaddata db.json
+	@backend/manage.py loaddata db.json

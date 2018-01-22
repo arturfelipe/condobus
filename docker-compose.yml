@@ -20,12 +20,12 @@ services:
 
   backend:
     restart: always
-    build: .
+    build: ./backend
     command: "./docker/web-start.sh"
     environment:
       DB_HOST: db
     volumes:
-      - .:/code
+      - ./backend:/code
     ports:
       - "8000:8000"
     depends_on:
@@ -33,10 +33,10 @@ services:
 
   frontend:
     restart: always
-    build: ./client
+    build: ./frontend
     command: "npm start"
     volumes:
-      - ./client:/code
+      - ./frontend:/code
     ports:
       - "3000:3000"
     depends_on:
