@@ -6,7 +6,7 @@ clean:
 	@find . -name "*.pyc" -delete
 
 setup-frontend:
-	@npm i --prefix client
+	@npm i --prefix frontend
 
 setup-backend:
 	@pip install -r backend/requirements-test.txt
@@ -20,13 +20,16 @@ run-backend: clean
 	@backend/manage.py runserver 0.0.0.0:8000
 
 run-frontend: clean
-	@npm start --prefix client
+	@npm start --prefix frontend
 
 migrate: clean
 	@backend/manage.py migrate
 
 test-backend: clean
 	@backend/manage.py test
+
+test-frontend: clean
+	@npm test --prefix frontend
 
 lint-backend: clean
 	@flake8 ${PYTHON_DIRS}
