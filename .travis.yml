@@ -1,8 +1,10 @@
 language: python
 sudo: false
 cache: pip
+
 python:
   - "3.6.2"
+
 services:
   - postgresql
 
@@ -15,8 +17,11 @@ addons:
 
 before_script:
   - psql -c "CREATE USER condobus WITH PASSWORD 'condobus' SUPERUSER" -U postgres
+  - nvm install 8.5
+  - nvm use 8.5
+
 script:
-  - make setup-backend
-  - make test-backend
+  - make setup
+  - make test
   - make lint-backend
   - make isort

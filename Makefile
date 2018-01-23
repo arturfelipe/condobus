@@ -31,6 +31,8 @@ test-backend: clean
 test-frontend: clean
 	@npm test --prefix frontend
 
+test: test-backend test-frontend
+
 lint-backend: clean
 	@flake8 ${PYTHON_DIRS}
 
