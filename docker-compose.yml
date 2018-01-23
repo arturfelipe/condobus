@@ -11,7 +11,7 @@ services:
       POSTGRES_PASSWORD: condobus
       POSTGRES_DB: condobus
     volumes:
-      - /srv/docker/postgresql:/var/lib/postgresql/data
+      - pg_data:/var/lib/postgresql/data
 
   pgadmin:
     image: chorss/docker-pgadmin4
@@ -34,12 +34,14 @@ services:
   frontend:
     restart: always
     build: ./frontend
-    command: "npm start"
+    command: "yarn start"
     volumes:
-      - ./frontend:/code
+      - ./frontend/src:/code/src
+      - ./frontend/public:/code/public
     ports:
       - "3000:3000"
     depends_on:
       - backend
 
-
+volumes:
+  pg_data:

@@ -7,6 +7,6 @@ RUN apt-get install -y binutils libproj-dev gdal-bin postgresql-client
 
 RUN mkdir /code
 WORKDIR /code
-ADD . /code/
+COPY . /code/
 
 RUN pip install -r requirements-test.txt
