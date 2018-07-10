@@ -2,7 +2,7 @@
   "name": "condobus",
   "version": "0.1.0",
   "private": true,
-  "description": "Get informations about the transportation system of your condominium",
+  "description": "Get information about your condominium transportation system",
   "author": "Artur Sousa <arturfelipe.sousa@gmail.com>",
   "license": "MIT",
   "proxy": "http://backend:8000",
