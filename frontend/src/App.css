@@ -1,78 +1,28 @@
-.cb-app {
-
-}
-
-.cb-app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 64px;
-  padding: 10px 16px;
-  background-color: #222;
-  display: flex;
-  align-items: center;
-  font-size: 0.8em;
-}
-
-/* .cb-app {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-content: stretch;
-  align-items: stretch;
-}
-
-.cb-app-header {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
-  flex-grow: 0;
-  flex-shrink: 0;
-  color: white;
-  background-color: #222;
-  height: 60px;
-  width: 100%;
-}
-
-.cb-app-logo {
-  height: 25px;
-  margin-right: 8px;
-}
-
-.cb-app-header__brand {
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.cb-app-name {
-  font-size: 1.3em;
-}
-
-.cb-app-main {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  padding-bottom: 70px;
-  width: 100%;
-  align-items: center;
-}
-
-.cb-app-footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: fixed;
-  height: 70px;
-  padding: 30px 24px;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.App {
   text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
   background-color: #222;
-} */
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

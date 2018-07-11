@@ -1,57 +1,5 @@
 body {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Helvetica Neue', 'Open-Reg', sans-serif;
-  background-color: #333;
-  color: white;
-}
-
-*, :after, :before {
-  box-sizing: inherit;
-}
-
-a,
-b,
-i,
-html,
-body,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-img,
-label,
-li,
-nav,
-ol,
-p,
-section,
-small,
-span,
-strong,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-u,
-ul {
   margin: 0;
   padding: 0;
-  border: 0;
-  vertical-align: baseline;
-}
-
-a,
-div {
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
+  font-family: sans-serif;
 }
