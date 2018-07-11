@@ -22,6 +22,12 @@ run-backend: clean
 run-frontend: clean
 	@npm start --prefix frontend
 
+run:
+	@docker-compose up
+
+stop:
+	@docker-compose down
+
 migrate: clean
 	@backend/manage.py migrate
 

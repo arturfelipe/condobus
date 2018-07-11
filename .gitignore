@@ -107,3 +107,6 @@ ENV/
 
 # Node
 node_modules
+
+# Editors
+.vscode

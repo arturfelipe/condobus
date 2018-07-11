@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
+import apiClient from "./graphql";
 import './App.css';
 
-import apiClient from "./graphql";
 
 class App extends Component {
-  state = { timeSheets: [] }
+  state = { organizations: [] }
 
   componentDidMount() {
-    const query = '{ timeSheets { version } }'
+    const query = '{ organizations { name, logo } }'
     apiClient(query)
       .then(({ data }) => {
-        this.setState({ timeSheets: data.timeSheets })
+        const { organizations } = data;
+        this.setState({ organizations })
       });
   }
 
   render() {
-    const { timeSheets } = this.state.timeSheets;
+    const { organizations } = this.state;
     return (
       <div className="App">
-        {timeSheets && timeSheets.map(sheet => {
-          return <div>{sheet.name}</div>
+        {organizations.map(org => {
+          return (
+            <div key={`organization-${org.id}`}>
+              {org.name}
+            </div>
+          );
         })}
       </div>
     );
