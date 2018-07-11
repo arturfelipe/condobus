@@ -1,42 +1,37 @@
 import React, { Component } from 'react';
+import { ApolloProvider, Query } from "react-apollo";
 import gql from 'graphql-tag';
 import apiClient from './graphql';
 
 import './App.css';
 
-
-class App extends Component {
-  state = { organizations: [] }
-
-  componentDidMount() {
-    const query = gql`
+const Organizations = () => (
+  <Query
+    query={gql`
       {
         organizations {
           name
           logo
         }
-      }
-    `
-    apiClient
-      .query({ query })
-      .then(result => {
-        const { organizations } = result.data;
-        this.setState({ organizations })
-      });
-  }
+      }`
+  }>
+    {({ data, error }) => {
+      return data.organizations ? data.organizations.map(org => (
+        <div key={`org-${org.name}`}>{org.name}</div>
+      )) : null
+    }}
+  </Query>
+);
 
+
+class App extends Component {
   render() {
-    const { organizations } = this.state;
     return (
-      <div className='App'>
-        {organizations.map(org => {
-          return (
-            <div key={`organization-${org.id}`}>
-              {org.name}
-            </div>
-          );
-        })}
-      </div>
+      <ApolloProvider client={apiClient}>
+        <div className='App'>
+          <Organizations />
+        </div>
+      </ApolloProvider>
     );
   }
 }
