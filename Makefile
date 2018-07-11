@@ -28,6 +28,9 @@ run:
 stop:
 	@docker-compose down
 
+docker-build:
+	@docker-compose build
+
 migrate: clean
 	@backend/manage.py migrate
 

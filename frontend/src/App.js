@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import apiClient from "./graphql";
+import gql from 'graphql-tag';
+import apiClient from './graphql';
+
 import './App.css';
 
 
@@ -7,10 +9,18 @@ class App extends Component {
   state = { organizations: [] }
 
   componentDidMount() {
-    const query = '{ organizations { name, logo } }'
-    apiClient(query)
-      .then(({ data }) => {
-        const { organizations } = data;
+    const query = gql`
+      {
+        organizations {
+          name
+          logo
+        }
+      }
+    `
+    apiClient
+      .query({ query })
+      .then(result => {
+        const { organizations } = result.data;
         this.setState({ organizations })
       });
   }
@@ -18,7 +28,7 @@ class App extends Component {
   render() {
     const { organizations } = this.state;
     return (
-      <div className="App">
+      <div className='App'>
         {organizations.map(org => {
           return (
             <div key={`organization-${org.id}`}>
